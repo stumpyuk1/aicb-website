@@ -29,7 +29,7 @@ const layers = [
   {
     title: "Civic Jury and liquid voice",
     detail:
-      "A stratified sortition panel — urban and rural, overlapping 6–12 month terms — decides place-based questions: Pattern Book amendments of principle, major siting, covenant changes. Residents vote directly or delegate, revocably. Nearby voices weigh more on local siting.",
+      "A stratified sortition panel — urban and rural, overlapping 6–12 month terms — decides the envelope: Pattern Book amendments of principle, major siting, reserved-stock cuts, amenity closures, levy redesign. A non-voting assessor sits with it to cost alternatives. Residents vote directly or delegate, revocably. Nearby voices weigh more on local siting.",
   },
   {
     title: "Amenity Trust",
@@ -62,6 +62,25 @@ const rules = [
   {
     title: "Public by default",
     body: "Deliberations, awards of the Arbitral Tribunal, levy calculations, and delivery KPIs are published. Capture hides in unread procedure; this design refuses unread procedure.",
+  },
+];
+
+const dockets = [
+  {
+    title: "The Jury decides the envelope",
+    body: "Street type, typology list, reserved-stock floor, amenity closures, levy redesign. Sortition, overlapping terms, nearby streets weighted on siting. If the panel is wrong, the street pays — and can tell within a year.",
+  },
+  {
+    title: "Officers apply the envelope",
+    body: "Fourteen-day Certificates of Conformance, levy accounts, service counts, works orders. Named officer, published KPI, removable. A Jury that stays a conforming Certificate is a planning committee.",
+  },
+  {
+    title: "The Tribunal enforces both",
+    body: "Specific performance, levy abatement, “name the clause.” It cannot invent a new Pattern Book. A late aesthetic preference is not a notice of non-conformance.",
+  },
+  {
+    title: "Counsel to the Jury does not vote",
+    body: "A professional assessor costs each Forced Construction package, says when it misses the envelope, and writes the reasons. The Jury still decides. The assessor stops a shrug becoming policy.",
   },
 ];
 
@@ -112,6 +131,36 @@ export default function ModelPage() {
         ))}
       </ol>
 
+      <h2 id="dockets" className="font-serif text-3xl mb-4 scroll-mt-28">
+        The two dockets
+      </h2>
+      <p className="text-[#94A3B8] leading-relaxed mb-8">
+        Sortition and professional office are not rival churches. They are
+        two clocks. Fold them together and you either capture the borough
+        or let it make unworkable decisions. The test: if this panel is
+        wrong, who pays, and can they tell within a year?
+      </p>
+      <div className="grid md:grid-cols-2 gap-6 mb-20">
+        {dockets.map((item) => (
+          <article
+            key={item.title}
+            className="p-6 border border-[#E8B59E]/20 rounded-2xl"
+          >
+            <h3 className="text-xl mb-3">{item.title}</h3>
+            <p className="text-[#94A3B8] leading-relaxed">{item.body}</p>
+          </article>
+        ))}
+      </div>
+      <p className="text-[#94A3B8] leading-relaxed mb-20">
+        Locked clauses — Crown reservation, Forced Construction, and the
+        judicial-review carve-out — are not Jury questions. They yield to
+        statute or revocation. Written into{" "}
+        <Link href="/covenant#art-9" className="text-[#E8B59E] hover:underline">
+          Covenant Article 9
+        </Link>
+        .
+      </p>
+
       <h2 className="font-serif text-3xl mb-8">Standing rules</h2>
       <div className="grid md:grid-cols-2 gap-6 mb-16">
         {rules.map((rule) => (
@@ -130,7 +179,8 @@ export default function ModelPage() {
         <ul className="space-y-3 text-[#94A3B8]">
           <li>Not a secession. The Crown’s sovereignty and the criminal law remain intact.</li>
           <li>Not a company town. Residents hold a franchise and a covenant with remedies.</li>
-          <li>Not a consultative forum. Juries decide; the Steward delivers; both can be removed.</li>
+          <li>Not a consultative forum. Juries decide the envelope; officers apply it; both can be removed.</li>
+          <li>Not a lawyers’ republic. The Tribunal names clauses. It does not rewrite the Book.</li>
           <li>
             Not a national overnight replacement. It is an opt-in pilot that
             neighbouring authorities are paid to tolerate, then copy if it
@@ -143,6 +193,10 @@ export default function ModelPage() {
         Read the{" "}
         <Link href="/covenant" className="text-[#E8B59E] hover:underline">
           Civic Covenant
+        </Link>
+        , the{" "}
+        <Link href="/pattern-book" className="text-[#E8B59E] hover:underline">
+          Pattern Book
         </Link>
         , the{" "}
         <Link href="/act" className="text-[#E8B59E] hover:underline">
