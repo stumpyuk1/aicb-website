@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const links = [
   { href: "/model", label: "The Model" },
+  { href: "/covenant", label: "Covenant" },
   { href: "/act", label: "The Act" },
   { href: "/community", label: "Community" },
   { href: "/pilots", label: "Pilots" },
@@ -108,6 +109,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <div className="flex flex-col gap-2">
             <Link href="/model" className="hover:text-[#E8B59E]">
               Synthesised governance
+            </Link>
+            <Link href="/covenant" className="hover:text-[#E8B59E]">
+              Civic Covenant
             </Link>
             <Link href="/act" className="hover:text-[#E8B59E]">
               Enabling Act
