@@ -7,6 +7,7 @@ import { useState } from "react";
 const links = [
   { href: "/model", label: "The Model" },
   { href: "/covenant", label: "Covenant" },
+  { href: "/pattern-book", label: "Pattern Book" },
   { href: "/act", label: "The Act" },
   { href: "/community", label: "Community" },
   { href: "/pilots", label: "Pilots" },
@@ -30,7 +31,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-7 text-sm">
+          <div className="hidden lg:flex items-center gap-6 text-sm">
             {links.map((link) => (
               <Link
                 key={link.href}
@@ -112,6 +113,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </Link>
             <Link href="/covenant" className="hover:text-[#E8B59E]">
               Civic Covenant
+            </Link>
+            <Link href="/pattern-book" className="hover:text-[#E8B59E]">
+              Pattern Book
             </Link>
             <Link href="/act" className="hover:text-[#E8B59E]">
               Enabling Act
