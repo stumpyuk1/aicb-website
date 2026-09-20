@@ -108,7 +108,14 @@ export default function ActPage() {
         re-absorbed.
       </aside>
 
-      <p className="mt-12">
+      <p className="mt-12 text-[#94A3B8]">
+        The Bill requires a Civic Covenant. The worked draft is here:{" "}
+        <Link href="/covenant" className="text-[#E8B59E] hover:underline">
+          Charter Borough Civic Covenant
+        </Link>
+        .
+      </p>
+      <p className="mt-4">
         <Link href="/model" className="text-[#E8B59E] hover:underline">
           ← Back to the governance model
         </Link>

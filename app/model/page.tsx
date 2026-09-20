@@ -141,10 +141,14 @@ export default function ModelPage() {
 
       <p className="mt-12 text-[#94A3B8]">
         Read the{" "}
+        <Link href="/covenant" className="text-[#E8B59E] hover:underline">
+          Civic Covenant
+        </Link>
+        , the{" "}
         <Link href="/act" className="text-[#E8B59E] hover:underline">
           enabling Act
-        </Link>{" "}
-        and the{" "}
+        </Link>
+        , and the{" "}
         <a
           href="https://networkedcommonsgovernance.org/wiki/charter"
           className="text-[#E8B59E] hover:underline"

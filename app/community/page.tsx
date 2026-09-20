@@ -102,6 +102,11 @@ export default function CommunityPage() {
         constitutional organ: it holds the reserved housing, sits as an
         observer on amenity questions before the Civic Jury, and has standing
         at the Arbitral Tribunal when covenanted social purpose is breached.
+        Those duties are written into{" "}
+        <Link href="/covenant#art-7" className="text-[#E8B59E] hover:underline">
+          Article 7 of the Civic Covenant
+        </Link>
+        .
       </div>
 
       <p className="text-sm text-[#94A3B8]">
