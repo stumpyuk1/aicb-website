@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0a2533;
+  --ink-soft: #123445;
+  --cream: #f5f0e8;
+  --sand: #e8b59e;
+  --slate: #94a3b8;
+  --line: rgba(232, 181, 158, 0.22);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: var(--cream);
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+.font-serif {
+  font-family: "Source Serif 4", "Times New Roman", serif;
+}
