@@ -84,6 +84,21 @@ const dockets = [
   },
 ];
 
+const offices = [
+  { name: "Steward", role: "Delivers" },
+  { name: "Court", role: "Appoints and sets levy" },
+  { name: "Jury", role: "Sets the envelope" },
+  { name: "Trust", role: "Holds reserved stock" },
+];
+
+function Arrow() {
+  return (
+    <div className="flex justify-center py-2 text-[#E8B59E]/70 text-lg" aria-hidden>
+      ↓
+    </div>
+  );
+}
+
 export default function ModelPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-20">
@@ -98,6 +113,55 @@ export default function ModelPage() {
         supplies the rules that stop that body becoming another captured
         machine.
       </p>
+
+      <figure id="diagram" className="mb-16 scroll-mt-28">
+        <div className="border border-[#E8B59E]/25 rounded-2xl p-5 sm:p-7 bg-[#0A2533]">
+          <p className="text-[11px] tracking-[0.22em] uppercase text-[#E8B59E] mb-5">
+            The stack at a glance
+          </p>
+
+          <div className="rounded-xl border border-[#E8B59E]/40 bg-[#E8B59E]/10 px-4 py-4 text-center">
+            <p className="font-serif text-xl">Crown in Parliament</p>
+            <p className="text-sm text-[#94A3B8] mt-1">
+              Enabling Act · Letters Patent · reserved national functions
+            </p>
+          </div>
+
+          <Arrow />
+
+          <div className="rounded-xl border border-[#E8B59E]/50 bg-[#E8B59E]/15 px-4 py-4 text-center">
+            <p className="font-serif text-xl">Charter Borough Trust Corporation</p>
+            <p className="text-sm text-[#94A3B8] mt-1">
+              Holds the land in trust · not a Crown servant
+            </p>
+          </div>
+
+          <Arrow />
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            {offices.map((office) => (
+              <div
+                key={office.name}
+                className="rounded-xl border border-[#E8B59E]/30 px-3 py-4 text-center"
+              >
+                <p className="font-serif text-lg">{office.name}</p>
+                <p className="text-xs text-[#94A3B8] mt-1 leading-snug">
+                  {office.role}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <figcaption className="mt-4 text-sm text-[#94A3B8] leading-relaxed">
+          The Crown authorises. The Corporation holds. Four offices then split
+          the work: the Steward delivers, the Court appoints and taxes, the
+          Jury sets the envelope, the Trust keeps the reserved stock. The{" "}
+          <Link href="#dockets" className="text-[#E8B59E] hover:underline">
+            two dockets
+          </Link>{" "}
+          stop any one of them sitting on another’s clock.
+        </figcaption>
+      </figure>
 
       <div className="space-y-6 text-lg leading-relaxed text-[#94A3B8] mb-16">
         <p>
