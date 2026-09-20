@@ -84,6 +84,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 {link.label}
               </Link>
             ))}
+            <Link href="/not-this" onClick={() => setOpen(false)} className="hover:text-[#E8B59E]">
+              What this is not
+            </Link>
             <a
               href="https://networkedcommonsgovernance.org/"
               target="_blank"
@@ -125,6 +128,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </Link>
             <Link href="/pilots" className="hover:text-[#E8B59E]">
               Pilot candidates
+            </Link>
+            <Link href="/not-this" className="hover:text-[#E8B59E]">
+              What this is not
             </Link>
           </div>
           <div>
