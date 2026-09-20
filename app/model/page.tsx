@@ -251,6 +251,11 @@ export default function ModelPage() {
             works.
           </li>
         </ul>
+        <p className="mt-6">
+          <Link href="/not-this" className="text-[#E8B59E] hover:underline">
+            Company town, secession, environmental carve-out →
+          </Link>
+        </p>
       </div>
 
       <p className="mt-12 text-[#94A3B8]">
