@@ -20,11 +20,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-[#0A2533] text-[#F5F0E8]">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0A2533]/95 backdrop-blur-md border-b border-[#E8B59E]/20">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-6">
           <Link href="/" className="flex items-center gap-3 min-w-0">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#E8B59E]/50 text-[#E8B59E] font-serif text-sm">
-              A
-            </span>
+            <img
+              src="/mark.svg"
+              alt=""
+              className="h-11 w-8 shrink-0"
+            />
             <span className="font-serif text-[15px] tracking-tight leading-tight">
               Advanced Innovation
               <br className="hidden sm:block" /> Charter Borough
@@ -99,12 +101,15 @@ export function Shell({ children }: { children: React.ReactNode }) {
         )}
       </nav>
 
-      <main className="pt-[72px]">{children}</main>
+      <main className="pt-[68px]">{children}</main>
 
       <footer className="border-t border-[#E8B59E]/10 py-14">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-sm text-[#94A3B8]">
           <div>
-            <p className="font-serif text-[#F5F0E8] text-lg mb-3">AICB</p>
+            <p className="flex items-center gap-2 font-serif text-[#F5F0E8] text-lg mb-3">
+              <img src="/mark.svg" alt="" className="h-8 w-6" />
+              AICB
+            </p>
             <p>
               A chartered territorial commons for Britain. Not a party. An
               institutional design that can be piloted, audited, and copied.
