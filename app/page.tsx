@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { bannerSrc } from "@/lib/banner-uri";
 
 const inheritances = [
   {
@@ -44,22 +45,26 @@ const mechanisms = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative min-h-[88vh] flex items-center">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#123445_0%,_#0A2533_58%)]" />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+      <section className="relative min-h-[88vh] flex items-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-[#0A2533] bg-cover bg-right bg-no-repeat"
+          style={{ backgroundImage: `url(${bannerSrc})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2533] via-[#0A2533]/88 to-[#0A2533]/25 md:to-transparent" />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
           <p className="inline-flex items-center gap-3 px-5 py-2 border border-[#E8B59E]/40 rounded-full text-[11px] tracking-[0.28em] text-[#E8B59E] uppercase mb-8">
             A territorial commons
           </p>
-          <h1 className="font-serif text-5xl md:text-7xl tracking-tight leading-[0.95] max-w-4xl">
+          <h1 className="font-serif text-5xl md:text-7xl tracking-tight leading-[0.95] max-w-xl">
             Advanced Innovation
             <br />
             Charter Borough
           </h1>
-          <p className="mt-8 max-w-2xl text-xl md:text-2xl text-[#E8B59E] font-light">
+          <p className="mt-8 max-w-xl text-xl md:text-2xl text-[#E8B59E] font-light">
             Where Networked Commons Governance meets ground, streets, and a
             covenant people can live under.
           </p>
-          <p className="mt-6 max-w-2xl text-lg text-[#94A3B8] leading-relaxed">
+          <p className="mt-6 max-w-xl text-lg text-[#94A3B8] leading-relaxed">
             An opt-in chartered enclave that replaces the veto cascade with
             accountable delivery — and refuses to treat a town as only a
             development site.
