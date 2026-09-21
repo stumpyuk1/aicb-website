@@ -1,25 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 140" fill="none">
-  <rect width="100" height="140" fill="#0A2533"/>
-  <path
-    d="M22 118 H32 V78 C32 48 40 28 50 18 C60 28 68 48 68 78 V118 H78"
-    stroke="#E8B59E"
-    stroke-width="4"
-    stroke-linejoin="miter"
-  />
-  <path
-    d="M36 86 V68 C36 52 42 40 50 34 C58 40 64 52 64 68 V86"
-    stroke="#E8B59E"
-    stroke-width="3.2"
-    stroke-linejoin="miter"
-  />
-  <g stroke="#E8B59E" stroke-width="2.2">
-    <rect x="43" y="62" width="7" height="7"/>
-    <rect x="50" y="62" width="7" height="7"/>
-    <rect x="43" y="69" width="7" height="7"/>
-    <rect x="50" y="69" width="7" height="7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 120" fill="none">
+  <rect width="80" height="120" fill="#0A2533"/>
+  <path d="M16 108 H26 V72 C26 44 34 26 40 16 C46 26 54 44 54 72 V108 H64" stroke="#E8B59E" stroke-width="3.4" stroke-linejoin="miter"/>
+  <path d="M28 80 V64 C28 50 33 38 40 32 C47 38 52 50 52 64 V80" stroke="#E8B59E" stroke-width="2.6" stroke-linejoin="miter"/>
+  <g stroke="#E8B59E" stroke-width="1.8">
+    <rect x="34.2" y="56" width="5.8" height="5.8"/>
+    <rect x="40" y="56" width="5.8" height="5.8"/>
+    <rect x="34.2" y="61.8" width="5.8" height="5.8"/>
+    <rect x="40" y="61.8" width="5.8" height="5.8"/>
   </g>
-  <path
-    fill="#E8B59E"
-    d="M50 22 L52.1 27.2 L57.6 27.8 L53.4 31.4 L54.6 36.8 L50 33.8 L45.4 36.8 L46.6 31.4 L42.4 27.8 L47.9 27.2 Z"
-  />
+  <path fill="#E8B59E" d="M40 20.5 L41.7 25.2 L46.8 25.6 L42.9 28.8 L44 33.8 L40 31 L36 33.8 L37.1 28.8 L33.2 25.6 L38.3 25.2 Z"/>
 </svg>
