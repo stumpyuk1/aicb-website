@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { bannerSrc } from "@/lib/banner-uri";
 
 const inheritances = [
   {
@@ -48,7 +47,7 @@ export default function HomePage() {
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-[#0A2533] bg-cover bg-right bg-no-repeat"
-          style={{ backgroundImage: `url(${bannerSrc})` }}
+          style={{ backgroundImage: "url(/banner.svg)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A2533] via-[#0A2533]/88 to-[#0A2533]/25 md:to-transparent" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
