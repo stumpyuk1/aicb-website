@@ -46,7 +46,7 @@ export default function HomePage() {
     <>
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <img
-          src="/banner.jpg"
+          src="/banner.jpg?v=3"
           alt="Charter Borough high street, viaduct and civic works at dusk"
           className="absolute inset-0 h-full w-full object-cover object-[72%_center]"
         />

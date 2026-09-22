@@ -11,7 +11,8 @@ function chunk(name) {
   return match[1].replace(/\s+/g, "").trim();
 }
 
-const buf = Buffer.from(`${chunk("a")}${chunk("b")}`, "base64");
+const parts = ["a", "b", "c", "d"].map(chunk).filter(Boolean);
+const buf = Buffer.from(parts.join(""), "base64");
 const outDir = join(root, "public");
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, "banner.jpg"), buf);
