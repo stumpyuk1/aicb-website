@@ -1,8 +1,19 @@
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const outDir = join(root, "public");
+const outFile = join(outDir, "banner.jpg");
+
+mkdirSync(outDir, { recursive: true });
+
+// Prefer a real committed JPEG. The GitHub text API cannot push binary,
+// so once public/banner.jpg is in the repo at full quality, leave it alone.
+if (existsSync(outFile) && statSync(outFile).size > 80000) {
+  console.log(`keeping existing public/banner.jpg (${statSync(outFile).size} bytes)`);
+  process.exit(0);
+}
 
 function chunk(name) {
   const src = readFileSync(join(root, "lib", `banner-${name}.ts`), "utf8");
@@ -13,7 +24,5 @@ function chunk(name) {
 
 const parts = ["a", "b", "c", "d"].map(chunk).filter(Boolean);
 const buf = Buffer.from(parts.join(""), "base64");
-const outDir = join(root, "public");
-mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, "banner.jpg"), buf);
+writeFileSync(outFile, buf);
 console.log(`wrote public/banner.jpg (${buf.length} bytes)`);
