@@ -17,5 +17,5 @@
     "paths": { "@/*": ["./*"] }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "lib/banner-a.ts", "lib/banner-b.ts", "lib/banner-c.ts", "lib/banner-d.ts"]
 }
