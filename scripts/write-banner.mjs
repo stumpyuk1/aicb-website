@@ -14,6 +14,11 @@ if (existsSync(outFile) && statSync(outFile).size > 80000) {
   process.exit(0);
 }
 
+if (!existsSync(partsDir)) {
+  console.warn("scripts/banner-b64 missing; skipping JPEG write");
+  process.exit(0);
+}
+
 const files = readdirSync(partsDir)
   .filter((f) => f.endsWith(".b64"))
   .sort();
