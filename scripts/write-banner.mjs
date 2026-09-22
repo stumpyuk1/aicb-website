@@ -7,11 +7,11 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 function chunk(name) {
   const src = readFileSync(join(root, "lib", `banner-${name}.ts`), "utf8");
   const match = src.match(/export const \w+ = [`"]([\s\S]*?)[`"]/);
-  if (!match) throw new Error(`could not parse lib/banner-${name}.ts`);
+  if (!match) return "";
   return match[1].replace(/\s+/g, "").trim();
 }
 
-const parts = ["a", "b", "c", "d"].map(chunk).filter(Boolean);
+const parts = ["a", "b", "c", "d", "e", "f", "g", "h"].map(chunk).filter(Boolean);
 const buf = Buffer.from(parts.join(""), "base64");
 const outDir = join(root, "public");
 mkdirSync(outDir, { recursive: true });
