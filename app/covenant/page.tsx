@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DraftStatus } from "@/components/DraftStatus";
 
 export const metadata: Metadata = {
   title: "Civic Covenant",
@@ -41,7 +42,27 @@ export default function CovenantPage() {
       <h1 className="font-serif text-5xl tracking-tight mb-6">Charter Borough Civic Covenant</h1>
       <p className="text-xl text-[#E8B59E] font-light mb-8">The bargain under which land is held, streets are kept, the levy is paid, and a veto is only allowed if it builds something in its place.</p>
       <p className="text-lg leading-relaxed text-[#94A3B8] mb-6">Every conveyance, long lease, and registered tenancy of twelve months or more inside a Charter Area takes effect subject to this Covenant.</p>
-      <p className="text-sm leading-relaxed text-[#94A3B8] mb-14 border border-[#E8B59E]/20 rounded-2xl p-5">Worked draft. Not executed and not legal advice. Figures are here so they can be attacked with a replacement number.</p>
+
+      <DraftStatus
+        instrument="Covenant"
+        version="0.1"
+        published="20 September 2026"
+        locked={[
+          "1.3 — no Crown servant, no displacement of indictable crime, no power of imprisonment",
+          "9.6 — Forced Construction: an objection without a feasible alternative is incompetent",
+          "9.8 — Crown reservation, Forced Construction, and the Article 11 judicial-review carve-out are not Jury questions",
+          "11.3 — ordinary judicial review does not lie except for action wholly outside the Act or Letters Patent",
+          "14 — Crown reservation and revocation",
+        ]}
+        log={[
+          {
+            version: "0.1",
+            date: "20 September 2026",
+            note: "First worked public draft. Fourteen articles. Two-dockets hybrid at Article 9. Amendment bar at 13.3 names the locked set.",
+          },
+        ]}
+      />
+
       <nav className="mb-16 columns-1 sm:columns-2 gap-8 text-sm text-[#94A3B8]">
         {toc.map((item) => (
           <a key={item.id} href={`#${item.id}`} className="block mb-2 hover:text-[#E8B59E]">{item.label}</a>

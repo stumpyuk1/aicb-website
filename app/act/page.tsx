@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DraftStatus } from "@/components/DraftStatus";
 
 export const metadata: Metadata = {
   title: "The Act",
@@ -65,7 +66,7 @@ export default function ActPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-20">
       <p className="text-[11px] tracking-[0.28em] uppercase text-[#E8B59E] mb-4">
-        Legal mechanism
+        Legal mechanism · draft 0.1
       </p>
       <h1 className="font-serif text-5xl tracking-tight mb-6">
         An Act to enable the Borough
@@ -74,7 +75,7 @@ export default function ActPage() {
         Draft working title: the Modern Royal Charters and Strategic Enterprise
         Act.
       </p>
-      <p className="text-lg leading-relaxed text-[#94A3B8] mb-16">
+      <p className="text-lg leading-relaxed text-[#94A3B8] mb-8">
         The Bill is a single primary statute. It does not rewrite local
         government for the whole country. It authorises His Majesty, on
         ministerial advice and after an affirmative Commons vote, to grant a
@@ -82,6 +83,28 @@ export default function ActPage() {
         Charter may lawfully take over, what it must pay its neighbours, and
         how the Crown can take it back.
       </p>
+
+      <DraftStatus
+        instrument="Bill"
+        version="0.1"
+        published="20 September 2026"
+        locked={[
+          "Designation only by Letters Patent after an affirmative Commons vote",
+          "The Trust Corporation is not a Crown servant",
+          "Fourteen-day Certificate of Conformance clock",
+          "Environmental Indemnity Bond and strict liability for harm outside the Area",
+          "Neighbour precept: 12.5% of levy and 10% of first freehold alienation",
+          "Tribunal exclusive on internal disputes; ordinary JR only for action wholly outside the Act or Letters Patent",
+          "Crown reservation, Crown Court on indictment, and revocation",
+        ]}
+        log={[
+          {
+            version: "0.1",
+            date: "20 September 2026",
+            note: "First public précis of the enabling Bill. Six parts. Figures are published so they can be attacked with a replacement number.",
+          },
+        ]}
+      />
 
       <div className="space-y-12">
         {parts.map((block) => (
