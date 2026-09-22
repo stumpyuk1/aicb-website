@@ -5,17 +5,39 @@ import "./globals.css";
 import { Shell } from "@/components/Shell";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.charterborough.org"),
   title: {
     default: "Advanced Innovation Charter Borough",
     template: "%s · AICB",
   },
   description:
     "A chartered territorial commons: English liberties, Networked Commons Governance, and a living community on the ground.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Advanced Innovation Charter Borough",
     description:
       "The territorial vehicle for Networked Commons Governance — a legally grounded opt-in borough that can actually build.",
+    url: "https://www.charterborough.org",
+    siteName: "Advanced Innovation Charter Borough",
+    locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "/banner",
+        width: 1168,
+        height: 784,
+        alt: "Charter Borough high street, viaduct and civic works at dusk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Advanced Innovation Charter Borough",
+    description:
+      "Where Networked Commons Governance meets ground, streets, and a covenant people can live under.",
+    images: ["/banner"],
   },
 };
 
