@@ -18,6 +18,7 @@ const pilots = [
     profile: "Greenfield and brownfield junctions on the Oxford–Cambridge arc.",
     cluster: "Life sciences, deep tech, frontier bio-engineering.",
     why: "Capital is already circling the arc and dying in county-boundary planning friction. A single Charter Area can straddle that friction and still remit a precept to each neighbour.",
+    featured: true,
   },
   {
     name: "Teesworks / Humber Marine Haven",
@@ -34,7 +35,7 @@ const phases = [
     title: "Statutory enabling",
     items: [
       "Draft and socialise the Modern Royal Charters and Strategic Enterprise Bill.",
-      "Identify a first footprint of 3,000–5,000 acres that meets the 500-hectare statutory floor.",
+      "Hold the first footprint at the 1,200-hectare Tempsford working spec, or replace it with a Forced Construction package that still meets the 500-hectare floor.",
       "Open conversations with pension capital, sovereign partners, and anchor employers who will accept a Civic Covenant.",
     ],
   },
@@ -52,7 +53,7 @@ const phases = [
     title: "Core delivery",
     items: [
       "First infrastructure: energy, water, waste, digital.",
-      "First 10,000 homes and the anchor commercial zone.",
+      "First streets under T1–T4 and the anchor commercial frontage at the interchange.",
       "Court of Assistants, Civic Jury, and Arbitral Tribunal go live.",
     ],
   },
@@ -81,8 +82,27 @@ export default function PilotsPage() {
         already the binding constraint — not a picturesque parish asked to
         host an experiment it did not invite.
       </p>
+
+      <aside className="p-8 border border-[#E8B59E]/40 rounded-2xl mb-14">
+        <p className="text-[11px] tracking-[0.22em] uppercase text-[#E8B59E] mb-3">
+          Worked first specification
+        </p>
+        <h2 className="font-serif text-3xl mb-4">Tempsford interchange</h2>
+        <p className="text-[#94A3B8] leading-relaxed mb-6">
+          1,200 hectares at the proposed East West Rail / East Coast Main Line
+          crossing. Neighbours named. Precept formula written. Year-one streets
+          limited to T1–T4. Not designated — specified so it can be attacked.
+        </p>
+        <Link
+          href="/footprint"
+          className="text-[#E8B59E] hover:underline"
+        >
+          Read the first-footprint page →
+        </Link>
+      </aside>
+
       <p className="text-lg text-[#94A3B8] leading-relaxed mb-16 max-w-3xl">
-        These three footprints are working candidates from the founding brief.
+        These three footprints remain working candidates from the founding brief.
         None is designated. Designation requires the Act, an affirmative
         Commons vote, and a Charter that a Civic Jury in the receiving region
         can live with.
@@ -115,6 +135,13 @@ export default function PilotsPage() {
                 <dd>{pilot.why}</dd>
               </div>
             </dl>
+            {"featured" in pilot && pilot.featured ? (
+              <p className="mt-6 text-sm">
+                <Link href="/footprint" className="text-[#E8B59E] hover:underline">
+                  Worked specification →
+                </Link>
+              </p>
+            ) : null}
           </article>
         ))}
       </div>
@@ -139,7 +166,7 @@ export default function PilotsPage() {
 
       <p>
         <Link href="/get-involved" className="text-[#E8B59E] hover:underline">
-          If you hold land, capital, or a regional brief — get involved →
+          If you hold land, capital, or a regional brief — file a package →
         </Link>
       </p>
     </div>

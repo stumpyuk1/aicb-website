@@ -11,6 +11,7 @@ const links = [
   { href: "/act", label: "The Act" },
   { href: "/community", label: "Community" },
   { href: "/pilots", label: "Pilots" },
+  { href: "/footprint", label: "Footprint" },
 ];
 
 export function Shell({ children }: { children: React.ReactNode }) {
@@ -33,7 +34,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-6 text-sm">
+          <div className="hidden lg:flex items-center gap-5 text-sm">
             {links.map((link) => (
               <Link
                 key={link.href}
@@ -133,6 +134,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </Link>
             <Link href="/pilots" className="hover:text-[#E8B59E]">
               Pilot candidates
+            </Link>
+            <Link href="/footprint" className="hover:text-[#E8B59E]">
+              First footprint
             </Link>
             <Link href="/not-this" className="hover:text-[#E8B59E]">
               What this is not
