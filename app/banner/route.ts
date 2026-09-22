@@ -1,12 +1,5 @@
-import { bannerSrc } from "@/lib/banner-uri";
+import { NextResponse } from "next/server";
 
 export function GET() {
-  const raw = bannerSrc.split(",")[1] ?? "";
-  const body = Buffer.from(raw, "base64");
-  return new Response(body, {
-    headers: {
-      "Content-Type": "image/jpeg",
-      "Cache-Control": "public, max-age=3600",
-    },
-  });
+  return NextResponse.redirect(new URL("/banner.jpg", "https://www.charterborough.org"), 308);
 }

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/banner",
+        url: "/banner.jpg",
         width: 1168,
         height: 784,
         alt: "Charter Borough high street, viaduct and civic works at dusk",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Advanced Innovation Charter Borough",
     description:
       "Where Networked Commons Governance meets ground, streets, and a covenant people can live under.",
-    images: ["/banner"],
+    images: ["/banner.jpg"],
   },
 };
 
