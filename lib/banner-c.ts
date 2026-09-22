@@ -1,2 +1,1 @@
-export const c =
-  "PLACEHOLDER_C";
+export const c = "";
