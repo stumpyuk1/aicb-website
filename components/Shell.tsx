@@ -115,6 +115,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
               A chartered territorial commons for Britain. Not a party. An
               institutional design that can be piloted, audited, and copied.
             </p>
+            <p className="mt-4">
+              <a href="https://www.charterborough.org" className="text-[#E8B59E] hover:underline">
+                www.charterborough.org
+              </a>
+            </p>
           </div>
           <div className="flex flex-col gap-2">
             <Link href="/model" className="hover:text-[#E8B59E]">
