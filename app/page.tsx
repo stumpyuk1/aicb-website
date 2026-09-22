@@ -44,13 +44,14 @@ const mechanisms = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative min-h-[88vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-[#0A2533]">
         <img
-          src="/banner.jpg?v=6"
-          alt="Charter Borough high street, viaduct and civic works at dusk"
-          className="absolute inset-0 h-full w-full object-cover object-[80%_42%]"
+          src="/banner.svg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover object-right"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2533] via-[#0A2533]/55 to-[#0A2533]/05" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2533] via-[#0A2533]/70 to-[#0A2533]/20" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
           <p className="inline-flex items-center gap-3 px-5 py-2 border border-[#E8B59E]/40 rounded-full text-[11px] tracking-[0.28em] text-[#E8B59E] uppercase mb-8">
             A territorial commons
