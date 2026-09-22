@@ -2,6 +2,12 @@
 
 Public site for the AICB project: a chartered territorial commons that combines historic English liberties, [Networked Commons Governance](https://networkedcommonsgovernance.org/), and the Guiting Power social model.
 
+## Live
+
+- Canonical: [https://www.charterborough.org](https://www.charterborough.org)
+- Apex `charterborough.org` 308-redirects to `www`
+- Vercel project: `aicb-website-6ha7`
+
 ## Stack
 
 Next.js (App Router) and Tailwind CSS v4 — same family as `stumpyuk1/ncg-website`.

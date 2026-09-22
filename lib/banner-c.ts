@@ -1,1 +1,1 @@
-PLACEHOLDER_C
+export const c = "";
