@@ -46,11 +46,11 @@ export default function HomePage() {
     <>
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <img
-          src="/banner.jpg?v=4"
+          src="/banner.jpg?v=5"
           alt="Charter Borough high street, viaduct and civic works at dusk"
-          className="absolute inset-0 h-full w-full object-cover object-[72%_center]"
+          className="absolute inset-0 h-full w-full object-cover object-[80%_42%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2533] via-[#0A2533]/80 to-[#0A2533]/18 md:to-[#0A2533]/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2533] via-[#0A2533]/55 to-[#0A2533]/05" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
           <p className="inline-flex items-center gap-3 px-5 py-2 border border-[#E8B59E]/40 rounded-full text-[11px] tracking-[0.28em] text-[#E8B59E] uppercase mb-8">
             A territorial commons
