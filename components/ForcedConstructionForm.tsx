@@ -85,7 +85,8 @@ export function ForcedConstructionForm() {
           Instrument under attack
         </label>
         <select
-          id="instrument"n          value={instrument}
+          id="instrument"
+          value={instrument}
           onChange={(e) => setInstrument(e.target.value as typeof instrument)}
           className={fieldClass}
         >
